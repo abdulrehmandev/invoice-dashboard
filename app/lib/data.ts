@@ -165,6 +165,8 @@ export async function fetchInvoicesPages(query: string) {
         )
       );
 
+    console.log(invoiceCount);
+
     const totalPages = Math.ceil(invoiceCount / ITEMS_PER_PAGE);
     return totalPages;
   } catch (error) {
